@@ -14,12 +14,199 @@
       rel="stylesheet"
       href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="./css/myphoto.css" />
 
     <title>Moja Fotka</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    <div class="alert alert-success">Witaj świecie!</div>
+    <div class="container-fluid myphoto-section bg-myphoto-welcome">
+      <div class="container">
+        <div class="jumbotron">
+          <h1>Witaj na stronie moja Fotka</h1>
+          <p>Zdjęcia do których będziesz wracać!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid myphoto-section bg-myphoto-dark">
+      <div class="container">
+        <div class="row">
+          <h3>Usługi</h3>
+        </div>
+        <ul class="nav nav-tabs nav-justified">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#services-events"
+              >Wydarzenia</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#services-personal"
+              >Osobiste</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#services-prints"
+              >Wydruki</a
+            >
+          </li>
+        </ul>
+        <div class="tab-content bg-myphoto-light">
+          <div role="tabpanel" class="tab-pane active" id="services-events">
+            <div class="container">
+              <div class="row">
+                <p>Lorem Ipsum</p>
+              </div>
+            </div>
+          </div>
+
+          <div role="tabpanel" class="tab-pane" id="services-personal">
+            <div class="container">
+              <div class="row">
+                <p>Lorem Ipsum</p>
+              </div>
+            </div>
+          </div>
+
+          <div role="tabpanel" class="tab-pane" id="services-prints">
+            <div class="m-x-auto" style="width: 50%">
+              <h1 class="bg-primary text-center">Oferta</h1>
+            </div>
+            <div class="container">
+              <h1 class="hidden-lg-down">Rozmiary druku</h1>
+              <div class="row">
+                <div class="node_modules col-sm-3">
+                  <h5 class="text-hide">Małe</h5>
+                  <div class="row">
+                    <div class="col-sm-4 bg-info">
+                      6x5
+                      <div class="row">
+                        <div class="col-sm-3 text-muted">€15</div>
+                        <div class="col-sm-3 text-success">€8</div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      8x10
+                      <div class="row">
+                        <div class="col-sm-3 text-muted">€18</div>
+                        <div class="col-sm-3 text-success">€11</div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      11x17
+                      <div class="row">
+                        <div class="col-sm-3 text-muted">€25</div>
+                        <div class="col-sm-3 text-success">€20</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="node_modules col-sm-3">
+                  <h5 class="text-hide">Średnie</h5>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      12x18
+                      <div class="row">
+                        <div class="col-sm-3 text-muted">€28</div>
+                        <div class="col-sm-3 text-success">€23</div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 bg-info">
+                      16x20
+                      <div class="row">
+                        <div class="col-sm-3 text-muted">€35</div>
+                        <div class="col-sm-3 text-success">€25</div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      18x24
+                      <div class="row">
+                        <div class="col-sm-3 text-muted">€40</div>
+                        <div class="col-sm-3 text-success">€32</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="node_modules col-sm-3">
+                  <h5 class="text-hide">Duże</h5>
+                  <div class="row">
+                    <div class="col-sm-4 bg-info">
+                      19x27
+                      <div class="row">
+                        <div class="col-sm-3 text-muted">€45</div>
+                        <div class="col-sm-3 text-success">€30</div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      20x30
+                      <div class="row">
+                        <div class="col-sm-3 text-muted">€48</div>
+                        <div class="col-sm-3 text-success">€40</div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 bg-info">
+                      22x28
+                      <div class="row">
+                        <div class="col-sm-3 text-muted">€55</div>
+                        <div class="col-sm-3 text-success">€40</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="node_modules col-sm-3">
+                  <h5 class="text-hide">Bardzo duże</h5>
+                  <div class="row">
+                    <div class="col-md-4">
+                      24x36
+                      <div class="row">
+                        <div class="col-sm-3 text-muted">€60</div>
+                        <div class="col-sm-3 text-success">€55</div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 bg-info">
+                      27x39
+                      <div class="row">
+                        <div class="col-sm-3 text-muted">€75</div>
+                        <div class="col-sm-3 text-success">€60</div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 bg-info">
+                      27x40
+                      <div class="row">
+                        <div class="col-sm-3 text-muted">€75</div>
+                        <div class="col-sm-3 text-success">€60</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-danger pull-xs-right">
+                <p class="label">Regulamin</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid myphoto-section bg-myphoto-light">
+      <div class="row">
+        <h3>Galeria</h3>
+      </div>
+    </div>
+
+    <div class="container-fluid myphoto-section bg-myphoto-dark">
+      <div class="row">
+        <h3>O nas</h3>
+      </div>
+    </div>
+
+    <div class="container-fluid myphoto-section bg-myphoto-light">
+      <div class="row">
+        <h3>Kontakt</h3>
+      </div>
+    </div>
+
+    <footer bg-my-photo-dark>Stopka</footer>
 
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
