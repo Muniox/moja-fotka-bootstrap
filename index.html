@@ -17,6 +17,13 @@
     <link rel="stylesheet" href="./css/myphoto.css" />
 
     <title>Moja Fotka</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -70,10 +77,13 @@
         </ul>
       </div>
     </nav>
-    <div class="container-fluid myphoto-section bg-myphoto-welcome">
+
+    <div
+      class="container-fluid myphoto-section bg-myphoto-welcome d-flex align-items-center"
+    >
       <div class="container">
-        <div class="jumbotron">
-          <h1>Witaj na stronie moja Fotka</h1>
+        <div class="jumbotron my-jumbotron">
+          <h1 class="jumbotron-title">Witaj na stronie moja Fotka</h1>
           <p>Zdjęcia do których będziesz wracać!</p>
         </div>
       </div>
@@ -341,7 +351,7 @@
       </div>
     </div>
 
-    <footer class="bg-my-photo-dark">Stopka</footer>
+    <footer class="bg-myphoto-dark">Stopka</footer>
 
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
