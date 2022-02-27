@@ -21,12 +21,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poiret+One&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-myphoto">
       <a href="#MojaFotka" class="navbar-brand">Moja-Fotka</a>
       <button
         class="navbar-toggler"
@@ -56,6 +56,8 @@
           <li class="nav-item">
             <a href="#kontakt" class="nav-link">Kontakt</a>
           </li>
+        </ul>
+        <ul class="navbar-nav pull-right">
           <li class="nav-item dropdown">
             <a
               href="#"
@@ -68,8 +70,21 @@
               <span class="caret"></span>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-              <a href="#" class="dropdown-item">Profil</a>
-              <a href="#" class="dropdown-item">Ustawienia</a>
+              <a
+                href="#"
+                class="dropdown-item"
+                data-toggle="modal"
+                data-target="#profile-modal"
+              >
+                Profil
+              </a>
+              <a
+                href="#"
+                class="dropdown-item"
+                data-toggle="modal"
+                data-target="#settings-modal"
+                >Ustawienia</a
+              >
               <div class="dropdown-divider"></div>
               <a href="#" class="dropdown-item">Wyloguj się</a>
             </div>
@@ -77,6 +92,72 @@
         </ul>
       </div>
     </nav>
+
+    <div class="modal" tabindex="-1" id="profile-modal" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="profile-modal-label">Profil</h4>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Zamknij"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Profil</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Anuluj
+            </button>
+            <button type="button" class="btn btn-primary">
+              Zachowaj zmiany
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="settings-modal" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="settings-modal-label">Ustawienia</h4>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Zamknij"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Ustawienia</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Anuluj
+            </button>
+            <button type="button" class="btn btn-primary">
+              Zachowaj zmiany
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div
       class="container-fluid myphoto-section bg-myphoto-welcome d-flex align-items-center"
