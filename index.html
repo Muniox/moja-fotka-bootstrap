@@ -1,440 +1,355 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="./css/myphoto.css" />
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./css/myphoto.css" />
 
-    <title>Moja Fotka</title>
+        <title>Moja Fotka</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poiret+One&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-myphoto">
-      <a href="#MojaFotka" class="navbar-brand">Moja-Fotka</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navigation"
-        aria-expanded="false"
-        aria-controls="navigation"
-        aria-label="open menu"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navigation">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a href="#powrot" class="nav-link">Strona główna</a>
-          </li>
-          <li class="nav-item">
-            <a href="#uslugi" class="nav-link">Usługi</a>
-          </li>
-          <li class="nav-item">
-            <a href="#galeria" class="nav-link">Galeria</a>
-          </li>
-          <li class="nav-item">
-            <a href="#ostronie" class="nav-link">O nas</a>
-          </li>
-          <li class="nav-item">
-            <a href="#kontakt" class="nav-link">Kontakt</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav pull-right">
-          <li class="nav-item dropdown">
-            <a
-              href="#"
-              class="nav-link dropdown-toggle"
-              data-toggle="dropdown"
-              role="button"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              <span class="caret"></span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right">
-              <a
-                href="#"
-                class="dropdown-item"
-                data-toggle="modal"
-                data-target="#profile-modal"
-              >
-                Profil
-              </a>
-              <a
-                href="#"
-                class="dropdown-item"
-                data-toggle="modal"
-                data-target="#settings-modal"
-                >Ustawienia</a
-              >
-              <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item">Wyloguj się</a>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poiret+One&display=swap"
+            rel="stylesheet" />
+    </head>
+    <body data-spy="scroll" data-target=".navbar">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-myphoto">
+            <a href="#" class="navbar-brand">Moja-Fotka</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navigation"
+                aria-expanded="false"
+                aria-controls="navigation"
+                aria-label="open menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navigation">
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#powrot">Strona główna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#uslugi">Usługi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#galeria">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ostronie">O nas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontakt">Kontakt</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav pull-right">
+                    <li class="nav-item dropdown">
+                        <a
+                            href="#"
+                            class="nav-link dropdown-toggle"
+                            data-toggle="dropdown"
+                            role="button"
+                            aria-haspopup="true"
+                            aria-expanded="false">
+                            <span class="caret"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#" class="dropdown-item" data-toggle="modal" data-target="#profile-modal">Profil</a>
+                            <a href="#" class="dropdown-item" data-toggle="modal" data-target="#settings-modal">Ustawienia</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item">Wyloguj się</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
+        </nav>
 
-    <div class="modal" tabindex="-1" id="profile-modal" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="profile-modal-label">Profil</h4>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Zamknij"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Profil</p>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Anuluj
-            </button>
-            <button type="button" class="btn btn-primary">
-              Zachowaj zmiany
-            </button>
-          </div>
+        <div class="modal" tabindex="-1" id="profile-modal" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="profile-modal-label">Profil</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Zamknij">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Profil</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
+                        <button type="button" class="btn btn-primary">Zachowaj zmiany</button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="modal" id="settings-modal" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="settings-modal-label">Ustawienia</h4>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Zamknij"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Ustawienia</p>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Anuluj
-            </button>
-            <button type="button" class="btn btn-primary">
-              Zachowaj zmiany
-            </button>
-          </div>
+        <div class="modal" tabindex="-1" id="settings-modal" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="settings-modal-label">Ustawienia</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Zamknij">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Ustawienia</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
+                        <button type="button" class="btn btn-primary">Zachowaj zmiany</button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div
-      class="container-fluid myphoto-section bg-myphoto-welcome d-flex align-items-center"
-    >
-      <div class="container">
-        <div class="jumbotron my-jumbotron">
-          <h1 class="jumbotron-title">Witaj na stronie moja Fotka</h1>
-          <p>Zdjęcia do których będziesz wracać!</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid myphoto-section bg-myphoto-dark" id="uslugi">
-      <div class="container">
-        <!-- <div class="row"> -->
-        <h3>Usługi</h3>
-        <!-- </div> -->
-        <ul class="nav nav-tabs nav-justified">
-          <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#services-events"
-              >Wydarzenia</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#services-personal"
-              >Osobiste</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#services-prints"
-              >Wydruki</a
-            >
-          </li>
-        </ul>
-        <div class="tab-content bg-myphoto-light">
-          <div role="tabpanel" class="tab-pane active" id="services-events">
+        <div class="container-fluid myphoto-section bg-myphoto-welcome d-flex align-items-center" id="powrot">
             <div class="container">
-              <div class="row">
-                <p>Lorem Ipsum</p>
-              </div>
+                <div class="jumbotron my-jumbotron">
+                    <h1 class="jumbotron-title">Witaj na stronie moja Fotka</h1>
+                    <p>Zdjęcia do których będziesz wracać!</p>
+                </div>
             </div>
-          </div>
+        </div>
 
-          <div role="tabpanel" class="tab-pane" id="services-personal">
+        <div class="container-fluid myphoto-section bg-myphoto-dark" id="uslugi">
             <div class="container">
-              <div class="row">
-                <p>Lorem Ipsum</p>
-              </div>
-            </div>
-          </div>
+                <div class="row">
+                    <h3>Usługi</h3>
+                </div>
+                <ul class="nav nav-tabs nav-justified">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#services-events">Wydarzenia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#services-personal">Osobiste</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#services-prints">Wydruki</a>
+                    </li>
+                </ul>
+                <div class="tab-content bg-myphoto-light">
+                    <div role="tabpanel" class="tab-pane active" id="services-events">
+                        <div class="container">
+                            <div class="row">
+                                <p>Lorem Ipsum</p>
+                            </div>
+                        </div>
+                    </div>
 
-          <div role="tabpanel" class="tab-pane" id="services-prints">
-            <div class="m-x-auto" style="width: 50%">
-              <h1 class="bg-primary text-center">Oferta</h1>
+                    <div role="tabpanel" class="tab-pane" id="services-personal">
+                        <div class="container">
+                            <div class="row">
+                                <p>Lorem Ipsum</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane" id="services-prints">
+                        <div class="m-x-auto" style="width: 50%">
+                            <h1 class="bg-primary text-center">Oferta</h1>
+                        </div>
+                        <div class="container">
+                            <h1 class="hidden-lg-down">Rozmiary druku</h1>
+                            <div class="row">
+                                <div class="node_modules col-sm-3">
+                                    <h5 class="text-hide">Małe</h5>
+                                    <div class="row">
+                                        <div class="col-sm-4 bg-info">
+                                            6x5
+                                            <div class="row">
+                                                <div class="col-sm-3 text-muted">€15</div>
+                                                <div class="col-sm-3 text-success">€8</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            8x10
+                                            <div class="row">
+                                                <div class="col-sm-3 text-muted">€18</div>
+                                                <div class="col-sm-3 text-success">€11</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            11x17
+                                            <div class="row">
+                                                <div class="col-sm-3 text-muted">€25</div>
+                                                <div class="col-sm-3 text-success">€20</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="node_modules col-sm-3">
+                                    <h5 class="text-hide">Średnie</h5>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            12x18
+                                            <div class="row">
+                                                <div class="col-sm-3 text-muted">€28</div>
+                                                <div class="col-sm-3 text-success">€23</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 bg-info">
+                                            16x20
+                                            <div class="row">
+                                                <div class="col-sm-3 text-muted">€35</div>
+                                                <div class="col-sm-3 text-success">€25</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            18x24
+                                            <div class="row">
+                                                <div class="col-sm-3 text-muted">€40</div>
+                                                <div class="col-sm-3 text-success">€32</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="node_modules col-sm-3">
+                                    <h5 class="text-hide">Duże</h5>
+                                    <div class="row">
+                                        <div class="col-sm-4 bg-info">
+                                            19x27
+                                            <div class="row">
+                                                <div class="col-sm-3 text-muted">€45</div>
+                                                <div class="col-sm-3 text-success">€30</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            20x30
+                                            <div class="row">
+                                                <div class="col-sm-3 text-muted">€48</div>
+                                                <div class="col-sm-3 text-success">€40</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 bg-info">
+                                            22x28
+                                            <div class="row">
+                                                <div class="col-sm-3 text-muted">€55</div>
+                                                <div class="col-sm-3 text-success">€40</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="node_modules col-sm-3">
+                                    <h5 class="text-hide">Bardzo duże</h5>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            24x36
+                                            <div class="row">
+                                                <div class="col-sm-3 text-muted">€60</div>
+                                                <div class="col-sm-3 text-success">€55</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 bg-info">
+                                            27x39
+                                            <div class="row">
+                                                <div class="col-sm-3 text-muted">€75</div>
+                                                <div class="col-sm-3 text-success">€60</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 bg-info">
+                                            27x40
+                                            <div class="row">
+                                                <div class="col-sm-3 text-muted">€75</div>
+                                                <div class="col-sm-3 text-success">€60</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-danger pull-xs-right">
+                                <p class="label">Regulamin</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <div class="container-fluid myphoto-section bg-myphoto-light" id="galeria">
             <div class="container">
-              <h1 class="hidden-lg-down">Rozmiary druku</h1>
-              <div class="row">
-                <div class="node_modules col-sm-3">
-                  <h5 class="text-hide">Małe</h5>
-                  <div class="row">
-                    <div class="col-sm-4 bg-info">
-                      6x5
-                      <div class="row">
-                        <div class="col-sm-3 text-muted">€15</div>
-                        <div class="col-sm-3 text-success">€8</div>
-                      </div>
+                <h3>Galeria</h3>
+                <div id="gallery-carousel" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="false">
+                    <div class="carousel-inner" role="listbox">
+                        <div style="height: 400px" class="carousel-item active">
+                            <img class="d-block img-fluid" src="./images/brazil.png" alt="" />
+                            <div class="carousel-caption">Brazylia</div>
+                        </div>
+                        <div style="height: 400px" class="carousel-item">
+                            <img class="d-block img-fluid" src="./images/datsun.png" alt="" />
+                            <div class="carousel-caption">Datsun 260Z</div>
+                        </div>
+                        <div style="height: 400px" class="carousel-item">
+                            <img class="d-block img-fluid" src="./images/skydive.png" alt="" />
+                            <div class="carousel-caption">Skoki na spadochronie</div>
+                        </div>
                     </div>
-                    <div class="col-sm-4">
-                      8x10
-                      <div class="row">
-                        <div class="col-sm-3 text-muted">€18</div>
-                        <div class="col-sm-3 text-success">€11</div>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      11x17
-                      <div class="row">
-                        <div class="col-sm-3 text-muted">€25</div>
-                        <div class="col-sm-3 text-success">€20</div>
-                      </div>
-                    </div>
-                  </div>
+                    <button class="carousel-control-prev" type="button" data-target="#gallery-carousel" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-target="#gallery-carousel" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </button>
+                    <ol class="carousel-indicators">
+                        <li data-target="#gallery-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#gallery-carousel" data-slide-to="1"></li>
+                        <li data-target="#gallery-carousel" data-slide-to="2"></li>
+                    </ol>
                 </div>
-                <div class="node_modules col-sm-3">
-                  <h5 class="text-hide">Średnie</h5>
-                  <div class="row">
-                    <div class="col-sm-4">
-                      12x18
-                      <div class="row">
-                        <div class="col-sm-3 text-muted">€28</div>
-                        <div class="col-sm-3 text-success">€23</div>
-                      </div>
-                    </div>
-                    <div class="col-sm-4 bg-info">
-                      16x20
-                      <div class="row">
-                        <div class="col-sm-3 text-muted">€35</div>
-                        <div class="col-sm-3 text-success">€25</div>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      18x24
-                      <div class="row">
-                        <div class="col-sm-3 text-muted">€40</div>
-                        <div class="col-sm-3 text-success">€32</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="node_modules col-sm-3">
-                  <h5 class="text-hide">Duże</h5>
-                  <div class="row">
-                    <div class="col-sm-4 bg-info">
-                      19x27
-                      <div class="row">
-                        <div class="col-sm-3 text-muted">€45</div>
-                        <div class="col-sm-3 text-success">€30</div>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      20x30
-                      <div class="row">
-                        <div class="col-sm-3 text-muted">€48</div>
-                        <div class="col-sm-3 text-success">€40</div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 bg-info">
-                      22x28
-                      <div class="row">
-                        <div class="col-sm-3 text-muted">€55</div>
-                        <div class="col-sm-3 text-success">€40</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="node_modules col-sm-3">
-                  <h5 class="text-hide">Bardzo duże</h5>
-                  <div class="row">
-                    <div class="col-md-4">
-                      24x36
-                      <div class="row">
-                        <div class="col-sm-3 text-muted">€60</div>
-                        <div class="col-sm-3 text-success">€55</div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 bg-info">
-                      27x39
-                      <div class="row">
-                        <div class="col-sm-3 text-muted">€75</div>
-                        <div class="col-sm-3 text-success">€60</div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 bg-info">
-                      27x40
-                      <div class="row">
-                        <div class="col-sm-3 text-muted">€75</div>
-                        <div class="col-sm-3 text-success">€60</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="bg-danger pull-xs-right">
-                <p class="label">Regulamin</p>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div class="container-fluid myphoto-section bg-myphoto-light" id="galeria">
-      <div class="container">
-        <h3>Galeria</h3>
-        <div
-          id="gallery-carousel"
-          class="carousel slide"
-          data-ride="carousel"
-          data-interval="4000"
-          data-pause="false"
-        >
-          <div class="carousel-inner" role="listbox">
-            <div style="height: 400px" class="carousel-item active">
-              <img class="d-block img-fluid" src="./images/brazil.png" alt="" />
-              <div class="carousel-caption">Brazylia</div>
+        <div class="container-fluid myphoto-section bg-myphoto-dark" id="ostronie">
+            <div class="container">
+                <div class="row">
+                    <h3>O stronie</h3>
+                    <div class="card bg-myphoto-light w-100">
+                        <div class="card-header">O Nas</div>
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Dowiedz się więcej o naszej stronie</h6>
+                            <p class="card-text">
+                                Styl fotografii zostanie dopasowany do Twoich indywidualnych potrzeb - jak gdybyś samodzielnie wykonał to
+                                zdjęcie. Weźmiesz udział w każdym etapie tworzenia fotografii, co da Ci gwarancję, że pozostaną one zgodne z
+                                Twoimi oczekiwaniami.
+                            </p>
+                            <p class="card-text">
+                                Nasi fotograficy mają wieloletnie doświadczenie, a ich zdjęcia (od slubnych po sportowe) zawsze są bardzo
+                                wysokiej jakości.
+                            </p>
+                            <p class="card-text">
+                                Moja Fotka oferuje również wspaniałe opcje wydruku we wszyskich rozmiarach i kształtach, na każdym arkuszu,
+                                w jakiejskolwiek formie. Poczynająć od bardzo duzych formatów do spersonalizowanych albumów zdjęciowych.
+                            </p>
+                            <p class="card-text">
+                                Moja Fotka to kompletne rozwiązanie, które w pełni zaspokoi Twoje potrzeby fotograficzne.
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted">Ⓒ Moja Fotka</div>
+                    </div>
+                </div>
             </div>
-            <div style="height: 400px" class="carousel-item">
-              <img class="d-block img-fluid" src="./images/datsun.png" alt="" />
-              <div class="carousel-caption">Datsun 260Z</div>
-            </div>
-            <div style="height: 400px" class="carousel-item">
-              <img
-                class="d-block img-fluid"
-                src="./images/skydive.png"
-                alt=""
-              />
-              <div class="carousel-caption">Skoki na spadochronie</div>
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-target="#gallery-carousel"
-            data-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-target="#gallery-carousel"
-            data-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </button>
-          <ol class="carousel-indicators">
-            <li
-              data-target="#gallery-carousel"
-              data-slide-to="0"
-              class="active"
-            ></li>
-            <li data-target="#gallery-carousel" data-slide-to="1"></li>
-            <li data-target="#gallery-carousel" data-slide-to="2"></li>
-          </ol>
         </div>
-      </div>
-    </div>
 
-    <div class="container-fluid myphoto-section bg-myphoto-dark" id="ostronie">
-      <div class="container">
-        <div class="row">
-          <h3>O stronie</h3>
-          <div class="card bg-myphoto-light w-100">
-            <div class="card-header">O Nas</div>
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted">
-                Dowiedz się więcej o naszej stronie
-              </h6>
-              <p class="card-text">
-                Styl fotografii zostanie dopasowany do Twoich indywidualnych
-                potrzeb - jak gdybyś samodzielnie wykonał to zdjęcie. Weźmiesz
-                udział w każdym etapie tworzenia fotografii, co da Ci gwarancję,
-                że pozostaną one zgodne z Twoimi oczekiwaniami.
-              </p>
-              <p class="card-text">
-                Nasi fotograficy mają wieloletnie doświadczenie, a ich zdjęcia
-                (od slubnych po sportowe) zawsze są bardzo wysokiej jakości.
-              </p>
-              <p class="card-text">
-                Moja Fotka oferuje również wspaniałe opcje wydruku we wszyskich
-                rozmiarach i kształtach, na każdym arkuszu, w jakiejskolwiek
-                formie. Poczynająć od bardzo duzych formatów do
-                spersonalizowanych albumów zdjęciowych.
-              </p>
-              <p class="card-text">
-                Moja Fotka to kompletne rozwiązanie, które w pełni zaspokoi
-                Twoje potrzeby fotograficzne.
-              </p>
+        <div class="container-fluid myphoto-section bg-myphoto-light" id="kontakt">
+            <div class="container">
+                <div class="row">
+                    <h3>Kontakt</h3>
+                </div>
             </div>
-            <div class="card-footer text-muted">Ⓒ Moja Fotka</div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div class="container-fluid myphoto-section bg-myphoto-light" id="kontakt">
-      <div class="row">
-        <h3>Kontakt</h3>
-      </div>
-    </div>
-
-    <footer class="bg-myphoto-dark">Stopka</footer>
-
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-  </body>
+        <footer class="bg-myphoto-dark">Stopka</footer>
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
 </html>

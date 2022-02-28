@@ -1,16 +1,21 @@
 {
-  "name": "moja-fotka-bootstrap",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bootstrap": "4.6.1",
-    "jquery": "3.5.1"
-  }
+    "name": "moja-fotka-bootstrap",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bootstrap": "4.6.1",
+        "jquery": "3.5.1"
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "bracketSameLine": true,
+        "printWidth": 140
+    }
 }
