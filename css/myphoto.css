@@ -32,21 +32,6 @@ body {
   color: white;
 }
 
-.my-jumbotron {
-  background: rgba(233, 236, 239, 0.25);
-  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.jumbotron-title {
-  font-weight: 800;
-  font-style: italic;
-}
-
 .bg-myphoto-welcome {
   background-image: url("../images/skyline.png");
   background-size: cover;
@@ -64,6 +49,16 @@ body {
   margin-bottom: 0px;
 }
 
+.my-jumbotron {
+  background: rgba(233, 236, 239, 0.25);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
 .navbar-myphoto .navbar-brand {
   color: white;
   font-weight: bold;
@@ -71,6 +66,11 @@ body {
 
 .navbar-myphoto .nav-item > .nav-link {
   color: white;
+}
+
+.navbar-myphoto .nav-item > .active {
+  color: gray !important;
+  text-decoration: underline;
 }
 
 .navbar-myphoto .nav-item > .nav-link:hover {
@@ -120,12 +120,10 @@ body {
 .nav-pills .nav-link.active,
 .nav-pills .nav-link.active:focus,
 .nav-pills .nav-link.active:hover,
-.nav-pills.nav-item.open .nav-link,
-.nav-pills.nav-item.open .nav-link:focus,
-.nav-pills.nav-item.open .nav-link,
-.nav-pills.nav-item.open .nav-link:focus,
-.nav-pills.nav-item.open .nav-link:hover {
-  background-color: gray;
+.nav-pills .nav-item.open .nav-link,
+.nav-pills .nav-item.open .nav-link:focus,
+.nav-pills .nav-item.open .nav-link:hover {
+  background-color: #f0ecec;
 }
 
 .navbar-myphoto > .navbar-toggler {
@@ -134,11 +132,22 @@ body {
 }
 
 .navbar-myphoto .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30'xmlns='http://www.w3.org/2000/svg'> <path stroke='rgba(255,255,255,0.5)'stroke-width='2'stroke-linecap='round'strokemiterlimit='10'd='M4 7h22M4 15h22M423h22' /> </svg> ");
+  background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 }
 
-.navbar-myphoto .nav-iteam > .active {
-  color: gray !important;
-  text-decoration: underline;
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #powrot {
+    position: relative;
+    overflow: hidden;
+  }
+  .ms-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1140px;
+  }
 }
 /*# sourceMappingURL=myphoto.css.map */
