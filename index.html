@@ -20,7 +20,7 @@
     </head>
     <body data-spy="scroll" data-target=".navbar">
         <nav class="navbar navbar-expand-lg fixed-top navbar-myphoto">
-            <a class="navbar-brand" href="#">Moja-Fotka</a>
+            <a class="navbar-brand" href="#">MojaFotka</a>
             <button
                 class="navbar-toggler"
                 type="button"
@@ -76,6 +76,12 @@
             </div>
         </nav>
 
+        <div class="alert alert-dismissible fixed-top alert-myphoto">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times</a>
+            <strong class="alert-heading">Przestarzała przeglądarka</strong>
+            Brak wsparcia Internet Explorera 8 i starszych.
+        </div>
+
         <div class="modal" tabindex="-1" id="profile-modal" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -121,11 +127,6 @@
                 <div class="jumbotron my-jumbotron">
                     <h1>Witaj na stronie moja Fotka</h1>
                     <p>Fotografie, do których będziesz wracać!</p>
-                </div>
-                <div class="alert alert-danger alert-dismissible">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times</a>
-                    <strong class="alert-heading">Przestarzała przeglądarka</strong>
-                    Brak wsparcia Internet Explorera 8 i starszych.
                 </div>
             </div>
         </div>
@@ -357,12 +358,33 @@
                 <div class="row">
                     <h3>Kontakt</h3>
                 </div>
+                <form action="">
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-user"></i>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Twoje imię" />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email" />
+                    </div>
+                </form>
             </div>
         </div>
 
-        <footer class="bg-myphoto-dark">Stopka</footer>
+        <footer class="footer text-center">
+            <p class="text-muted"><small>&copy; MojaFotka sp. z o.o.</small></p>
+            <p class="text-muted">
+                <a href="#"><small>Regulamin</small></a>
+            </p>
+            <p class="text-muted">
+                <a href="#"><small>O nas</small></a>
+            </p>
+        </footer>
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="./node_modules/popper.js/dist/popper.min.js"></script>
+        <!-- <script src="./node_modules/popper.js/dist/popper.min.js"></script> -->
         <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
