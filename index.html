@@ -76,7 +76,7 @@
             </div>
         </nav>
 
-        <div class="alert alert-dismissible fixed-top alert-myphoto">
+        <div class="alert alert-dismissible fixed-top alert-myphoto" id="unsupported-browser-alert">
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times</a>
             <strong class="alert-heading">Przestarzała przeglądarka</strong>
             Brak wsparcia Internet Explorera 8 i starszych.
@@ -384,7 +384,7 @@
                 </p>
 
                 <form action="" class="" novalidate>
-                    <div class="form-group input-group">
+                    <div class="form-group input-group has-validation">
                         <div class="input-group-prepend">
                             <span class="input-group-text">
                                 <i class="fa fa-user"></i>
@@ -394,7 +394,7 @@
                         <div class="invalid-feedback">Wprowadź imię.</div>
                     </div>
 
-                    <div class="form-group input-group">
+                    <div class="form-group input-group has-validation">
                         <div class="input-group-prepend">
                             <span class="input-group-text">
                                 <i class="fa fa-at"></i>
@@ -409,7 +409,7 @@
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-success"><i class="fa fa-send-o mr-2"></i>Wyślij</button>
+                        <button type="submit" class="btn btn-success" disabled><i class="fa fa-send-o mr-2"></i>Wyślij</button>
                     </div>
                 </form>
             </div>
@@ -424,9 +424,11 @@
                 <a href="#"><small>O nas</small></a>
             </p>
         </footer>
+
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>
         <!-- <script src="./node_modules/popper.js/dist/popper.min.js"></script> -->
         <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="./node_modules/jquery.browser/dist/jquery.browser.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
                 $(".nav-link").on("click", function (evt) {
@@ -439,6 +441,14 @@
                     }
                 });
             });
+        </script>
+        <script type="text/javascript">
+            if ($.browser.msie) {
+                $("#unsupported-browser-alert").show();
+            }
+            // if ($.browser.msie && $.browsermsie <= 9) {
+            //     $("#unsupported-browser-alert").show();
+            // }
         </script>
     </body>
 </html>
