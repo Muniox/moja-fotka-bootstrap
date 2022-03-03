@@ -323,32 +323,48 @@
         </div>
 
         <div class="container-fluid myphoto-section bg-myphoto-dark" id="ostronie">
-            <div class="container">
+            <div class="container py-4">
                 <div class="row">
                     <h3>O stronie</h3>
-                    <div class="card bg-myphoto-light w-100">
-                        <div class="card-header">O Nas</div>
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">Dowiedz się więcej o naszej stronie</h6>
-                            <p class="card-text">
-                                Styl fotografii zostanie dopasowany do Twoich indywidualnych potrzeb - jak gdybyś samodzielnie wykonał to
-                                zdjęcie. Weźmiesz udział w każdym etapie tworzenia fotografii, co da Ci gwarancję, że pozostaną one zgodne z
-                                Twoimi oczekiwaniami.
-                            </p>
-                            <p class="card-text">
-                                Nasi fotograficy mają wieloletnie doświadczenie, a ich zdjęcia (od slubnych po sportowe) zawsze są bardzo
-                                wysokiej jakości.
-                            </p>
-                            <p class="card-text">
-                                Moja Fotka oferuje również wspaniałe opcje wydruku we wszyskich rozmiarach i kształtach, na każdym arkuszu,
-                                w jakiejskolwiek formie. Poczynająć od bardzo duzych formatów do spersonalizowanych albumów zdjęciowych.
-                            </p>
-                            <p class="card-text">
-                                Moja Fotka to kompletne rozwiązanie, które w pełni zaspokoi Twoje potrzeby fotograficzne.
-                            </p>
+                </div>
+                <div class="card bg-myphoto-light w-100">
+                    <div class="card-header">O Nas</div>
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-2 text-muted">Dowiedz się więcej o naszej stronie</h6>
+                        <p class="card-text">
+                            Styl fotografii zostanie dopasowany do Twoich indywidualnych potrzeb - jak gdybyś samodzielnie wykonał to
+                            zdjęcie. Weźmiesz udział w każdym etapie tworzenia fotografii, co da Ci gwarancję, że pozostaną one zgodne z
+                            Twoimi oczekiwaniami.
+                        </p>
+                        <p class="card-text">
+                            Nasi fotograficy mają wieloletnie doświadczenie, a ich zdjęcia (od slubnych po sportowe) zawsze są bardzo
+                            wysokiej jakości.
+                        </p>
+                        <p class="card-text">
+                            Moja Fotka oferuje również wspaniałe opcje wydruku we wszyskich rozmiarach i kształtach, na każdym arkuszu, w
+                            jakiejskolwiek formie. Poczynająć od bardzo duzych formatów do spersonalizowanych albumów zdjęciowych.
+                        </p>
+                        <p class="card-text">Moja Fotka to kompletne rozwiązanie, które w pełni zaspokoi Twoje potrzeby fotograficzne.</p>
+                        <blockquote class="blockquote">
+                            <p>Jestem bardzo zmotywowany.</p>
+                            <footer class="blockquote-footer">
+                                -Założyciel,
+                                <cite>Time Magazine</cite>
+                            </footer>
+                        </blockquote>
+                        <div class="media">
+                            <img src="./images/jason.jpg" alt="Jason" class="mr-3" />
+                            <div class="media-body">
+                                <h5 class="mt-0">Jason</h5>
+                                Jakiś tekst Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam numquam nobis hic, rerum quos
+                                sequi minus. Sapiente aliquid cumque, doloribus officia quidem, unde reiciendis pariatur in cum dolorem
+                                laudantium excepturi. Veritatis corporis velit fugit in unde amet necessitatibus quibusdam totam, iusto sunt
+                                asperiores saepe quia quidem sequi illum incidunt? Omnis esse accusamus labore in quo eum laboriosam, aut
+                                sint ipsam!
+                            </div>
                         </div>
-                        <div class="card-footer text-muted">Ⓒ Moja Fotka</div>
                     </div>
+                    <div class="card-footer text-muted">Ⓒ Moja Fotka</div>
                 </div>
             </div>
         </div>
@@ -358,17 +374,42 @@
                 <div class="row">
                     <h3>Kontakt</h3>
                 </div>
-                <form action="">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas minima sit, quibusdam explicabo esse sint, dolores
+                    placeat tempore id repudiandae natus laborum optio commodi temporibus saepe eos corrupti ipsum quod. Praesentium porro
+                    eaque molestias necessitatibus, possimus consectetur distinctio modi at quod ducimus deleniti sunt nostrum animi rerum
+                    eveniet voluptatum dolorum expedita labore mollitia aut repudiandae nisi officiis. Totam, saepe amet. Placeat nostrum
+                    vel qui incidunt illo cumque voluptates, veritatis autem aspernatur voluptatum id ullam tempora aliquam libero deserunt
+                    sequi. Dignissimos sunt nihil ea doloribus earum incidunt ullam mollitia deleniti? Nostrum!
+                </p>
+
+                <form action="" class="" novalidate>
                     <div class="form-group input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">
                                 <i class="fa fa-user"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Twoje imię" />
+                        <input type="text" class="form-control is-invalid" placeholder="Twoje imię" />
+                        <div class="invalid-feedback">Wprowadź imię.</div>
                     </div>
+
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-at"></i>
+                            </span>
+                        </div>
+                        <input type="email" class="form-control is-valid" placeholder="Email" />
+                    </div>
+
                     <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Email" />
+                        <label for="message"> Wiadomość </label>
+                        <textarea class="form-control is-invalid" name="" id="message" rows="5"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success"><i class="fa fa-send-o mr-2"></i>Wyślij</button>
                     </div>
                 </form>
             </div>
